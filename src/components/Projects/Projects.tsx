@@ -1,4 +1,5 @@
 import React from "react";
+import "./project.css";
 
 interface Project {
   url: string;
@@ -21,25 +22,22 @@ const Projects = () => {
     {
       url: "",
       name: "CodeWars",
-      description: "Project description",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum tempora iste, aperiam dicta deserunt quisquam atque necessitatibus numquam, nostrum fugit voluptas unde. Minus nobis non ratione nisi, similique autem fugiat? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum tempora iste, aperiam dicta deserunt quisquam atque necessitatibus numquam, nostrum fugit voluptas unde. Minus nobis non ratione nisi, similique autem fugiat?",
     },
   ];
 
   return (
     <div className="projects">
-      <div className="project-header">Projects</div>
-      <div className="projects-left">
-        <ul>
-          {data.map((project: Project, idx: number) => (
-            <li key={idx}>
-              <h3>{project.name}</h3>
-              <p>{project.description}</p>
-              <a href={project.url}>Link</a>
-            </li>
-          ))}
-        </ul>
+      <div className="project-titles">
+        {data.map((project: Project, idx: number) => (
+          <h3 key={idx}>{project.name}</h3>
+        ))}
       </div>
-      <div className="projects-right"></div>
+      <div className="project-details">
+        <span className="description-text">Description:</span>
+        <p className="project-description">{data[2].description}</p>
+      </div>
     </div>
   );
 };

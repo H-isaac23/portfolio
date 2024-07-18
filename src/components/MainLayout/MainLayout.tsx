@@ -10,18 +10,13 @@ const MainLayout = ({ children }: LayoutProps) => {
     <>
       <header className="main-layout">
         <nav className="navbar">
-          <span className="nav-logo">Logo here</span>
+          <span className="nav-logo">Logo</span>
           <span className="nav-item">Home</span>
           <span className="nav-item">Projects</span>
           <span className="nav-item">Contact</span>
         </nav>
         <main className="main-body">{children}</main>
       </header>
-      <footer className="footer">
-        <nav>hi</nav>
-        <nav>hello</nav>
-        <nav>wat</nav>
-      </footer>
     </>
   );
 };
