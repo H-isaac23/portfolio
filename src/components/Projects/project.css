@@ -6,6 +6,14 @@
   overflow: hidden;
 }
 
+.project-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  flex-grow: 1;
+}
+
 .project-titles {
   display: flex;
   flex-direction: row;
@@ -19,12 +27,22 @@
   justify-content: center;
   flex-grow: 1;
 
-  position: relative;
-  left: 20%;
+  /* position: relative;
+  left: 20%; */
 }
 
 .project-description {
-  width: 60%;
+  text-align: justify;
+}
+
+.left-section,
+.right-section {
+  width: 40%;
+  align-self: center;
+}
+
+.project-image {
+  width: 100%;
 }
 
 /* .description-text {

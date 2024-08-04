@@ -16,9 +16,13 @@
   flex-direction: column;
   justify-content: center;
   max-height: 95vh;
+  gap: 1em;
+
+  margin-left: 2em;
+  margin-right: 5em;
 }
 
-.nav-item,
+/* .nav-item,
 .nav-logo {
   margin-left: 2em;
-}
+} */

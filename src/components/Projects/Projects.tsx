@@ -1,5 +1,6 @@
 import React from "react";
 import "./project.css";
+import { Solo } from "../../assets/codewars";
 
 interface Project {
   url: string;
@@ -34,9 +35,16 @@ const Projects = () => {
           <h3 key={idx}>{project.name}</h3>
         ))}
       </div>
-      <div className="project-details">
-        <span className="description-text">Description:</span>
-        <p className="project-description">{data[2].description}</p>
+      <div className="project-section">
+        <div className="left-section">
+          <div className="project-details">
+            <span className="description-text">Description:</span>
+            <p className="project-description">{data[2].description}</p>
+          </div>
+        </div>
+        <div className="right-section">
+          <img className="project-image" src={Solo} alt="Solo Play image" />
+        </div>
       </div>
     </div>
   );
