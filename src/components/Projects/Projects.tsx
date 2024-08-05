@@ -1,6 +1,6 @@
 import React from "react";
 import "./project.css";
-import { Solo } from "../../assets/codewars";
+import { Solo, Pvp, MainMenu } from "../../assets/codewars";
 
 interface Project {
   url: string;
@@ -43,7 +43,17 @@ const Projects = () => {
           </div>
         </div>
         <div className="right-section">
-          <img className="project-image" src={Solo} alt="Solo Play image" />
+          <img
+            className="project-image image-1"
+            src={Solo}
+            alt="Solo Play image"
+          />
+          <img
+            className="project-image image-2"
+            src={MainMenu}
+            alt="Main menu image"
+          />
+          <img className="project-image image-3" src={Pvp} alt="PVP image" />
         </div>
       </div>
     </div>
