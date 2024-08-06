@@ -111,6 +111,9 @@ const ProjectItem = ({ projectItem }: { projectItem: Project }) => {
         <div className="project-details">
           <p className="project-description">{projectItem.description}</p>
         </div>
+        <a className="github-link" href={projectItem.url} target="noreferrer">
+          Github Repo
+        </a>
       </div>
       <div className="right-section">
         {projectItem.images.map((image: string, idx: number) => {

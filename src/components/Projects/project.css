@@ -42,6 +42,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+  font-family: "studiofeixenbook-trial", sans-serif;
 }
 
 .project-details {
@@ -220,4 +222,16 @@
 .project-title:hover::before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+/* Github link */
+
+.github-link {
+  font-size: 1.5em;
+  color: rgb(118, 123, 194);
+  text-decoration: underline;
+}
+
+.github-link:active {
+  color: rgb(118, 123, 194);
 }

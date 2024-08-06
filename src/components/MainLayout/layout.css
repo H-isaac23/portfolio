@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "studiofeixenbold-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "studiofeixenultralightitalic-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-UltralightItalic.ttf")
+    format("truetype");
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "studiofeixenbook-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Book.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .main-layout {
   display: flex;
   flex-direction: row;
@@ -19,6 +43,7 @@
   gap: 1em;
 
   margin-left: 2em;
+  font-family: "studiofeixenbook-trial", sans-serif;
   /* margin-right: 3em; */
 }
 
