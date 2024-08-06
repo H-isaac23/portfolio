@@ -3,6 +3,7 @@ import MainLayout from "./components/MainLayout/MainLayout";
 import Projects from "./components/Projects/Projects";
 import Home from "./components/Home/Home";
 import Contact from "./components/Contact/Contact";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         {/* <p>some paragraph here</p> */}
         {/* <Projects /> */}
         {/* <Home /> */}
-        <Contact />
+        {/* <Contact /> */}
+        <Outlet />
       </MainLayout>
     </>
   );
