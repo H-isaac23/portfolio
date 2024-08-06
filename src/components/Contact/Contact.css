@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "studiofeixenbold-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "studiofeixenultralight-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Ultralight.ttf")
+    format("truetype");
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "studiofeixenbook-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Book.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-left {
+  width: 60%;
+  margin-left: 3em;
+}
+
+.about-text {
+  font-family: "studiofeixenbold-trial", sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  color: rgb(118, 123, 194);
+  position: relative;
+}
+
+.about-text::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(118, 123, 194);
+  bottom: 0;
+  left: 0;
+}
+
+.about-details {
+  font-family: "studiofeixenbook-trial", sans-serif;
+  font-size: 1.1em;
+  width: 80%;
+  margin-top: 2em;
+}
+
+.about-right {
+  width: 30%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+
+.about-right img {
+  width: 100%;
+  border-bottom-left-radius: 50px;
+}
+
+/* Contact */
+
+.contact-links {
+  margin-top: 2em;
+  width: 50%;
+  font-size: 1.3em;
+  font-family: "studiofeixenultralight-trial", sans-serif;
+
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  /* visibility: hidden; */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.contact-item {
+  margin-top: 0.5em;
+  position: relative;
+
+  display: flex;
+}
+
+.contact-item a {
+  position: relative;
+  left: 0;
+  transition: left 0.1s ease;
+}
+
+.contact-item a:hover {
+  position: relative;
+  left: 28px;
+  color: rgb(118, 123, 194);
+}
+
+.contact-item:has(.arrow):hover .arrow {
+  visibility: visible;
+  opacity: 1;
+  color: rgb(118, 123, 194);
+}
+
+.contact-item a,
+.contact-item a:active {
+  color: rgba(255, 255, 255, 0.87);
+}

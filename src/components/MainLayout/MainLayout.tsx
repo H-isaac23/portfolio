@@ -10,10 +10,10 @@ const MainLayout = ({ children }: LayoutProps) => {
     <>
       <header className="main-layout">
         <nav className="navbar">
-          <span className="nav-logo">Logo</span>
+          {/* <span className="nav-logo">Logo</span> */}
           <span className="nav-item">Home</span>
           <span className="nav-item">Projects</span>
-          <span className="nav-item">Contact</span>
+          <span className="nav-item">About / Contact</span>
         </nav>
         <main className="main-body">{children}</main>
       </header>
