@@ -1,30 +1,35 @@
 import React from "react";
 import "./project.css";
 import { Solo, Pvp, MainMenu } from "../../assets/codewars";
+import { Events, Fines, Scan } from "../../assets/qrca";
+import { Intro, Streams, Tweets } from "../../assets/vupdates";
 
 interface Project {
   url: string;
   name: string;
   description: string;
+  images: string[];
 }
 
 const Projects = () => {
   const data: Project[] = [
     {
-      url: "",
+      url: "https://github.com/H-isaac23/CodeWars",
       name: "CodeWars",
       description: "Project description",
+      images: [Solo, Pvp, MainMenu],
+    },
+    {
+      url: "https://github.com/orgs/qrca/repositories",
+      name: "QR Attendance",
+      description: "Project description",
+      images: [Events, Fines, Scan],
     },
     {
       url: "",
       name: "CodeWars",
       description: "Project description",
-    },
-    {
-      url: "",
-      name: "CodeWars",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum tempora iste, aperiam dicta deserunt quisquam atque necessitatibus numquam, nostrum fugit voluptas unde. Minus nobis non ratione nisi, similique autem fugiat? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum tempora iste, aperiam dicta deserunt quisquam atque necessitatibus numquam, nostrum fugit voluptas unde. Minus nobis non ratione nisi, similique autem fugiat?",
+      images: [Tweets, Intro, Streams],
     },
   ];
 
@@ -36,27 +41,37 @@ const Projects = () => {
         ))}
       </div>
       <div className="project-section">
-        <div className="left-section">
-          <div className="project-details">
-            <span className="description-text">Description:</span>
-            <p className="project-description">{data[2].description}</p>
-          </div>
-        </div>
-        <div className="right-section">
-          <img
-            className="project-image image-1"
-            src={Solo}
-            alt="Solo Play image"
-          />
-          <img
-            className="project-image image-2"
-            src={MainMenu}
-            alt="Main menu image"
-          />
-          <img className="project-image image-3" src={Pvp} alt="PVP image" />
-        </div>
+        <ProjectItem projectItem={data[1]} />
       </div>
     </div>
+  );
+};
+
+const ProjectItem = ({ projectItem }: { projectItem: Project }) => {
+  return (
+    <>
+      <div className="left-section">
+        <div className="project-details">
+          <span className="description-text">Description:</span>
+          <p className="project-description">{projectItem.description}</p>
+        </div>
+      </div>
+      <div className="right-section">
+        {projectItem.images.map((image: string, idx: number) => {
+          return (
+            <img
+              className={
+                projectItem.name !== "QR Attendance"
+                  ? `project-image image-${idx + 1}`
+                  : `qr-project-image qr-image-${idx + 1}`
+              }
+              src={image}
+              alt=""
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

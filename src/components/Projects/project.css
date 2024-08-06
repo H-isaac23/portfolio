@@ -48,11 +48,23 @@
 
 .right-section {
   width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   z-index: 1;
+}
+
+.qr-project-image {
+  height: 80%;
+  position: absolute;
+  opacity: 0.5;
+
+  border-radius: 1em;
+  z-index: 0;
+
+  transition: max-height 0.1s linear, opacity 0.1s linear;
 }
 
 .project-image {
@@ -69,10 +81,21 @@
 .project-image:hover {
   opacity: 1;
   z-index: 1;
-  width: 80%;
+  width: 75%;
+}
+
+.qr-project-image:hover {
+  opacity: 1;
+  z-index: 1;
+  max-height: 80%;
 }
 
 .right-section:has(.project-image:hover) :not(.project-image:hover) {
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.right-section:has(.qr-project-image:hover) :not(.qr-project-image:hover) {
   opacity: 0.5;
   z-index: 0;
 }
@@ -81,15 +104,32 @@
   opacity: 1;
   z-index: 1;
 
-  bottom: -8em;
+  bottom: 15em;
 }
 
 .image-2 {
-  right: 10em;
-  transform: rotate(-5deg);
+  right: 15em;
+  transform: rotate(-10deg);
 }
 
 .image-3 {
-  left: 10em;
+  left: 15em;
+  transform: rotate(10deg);
+}
+
+.qr-image-1 {
+  opacity: 1;
+  z-index: 1;
+
+  bottom: 8em;
+}
+
+.qr-image-2 {
+  right: 20em;
+  transform: rotate(-5deg);
+}
+
+.qr-image-3 {
+  left: 20em;
   transform: rotate(5deg);
 }
