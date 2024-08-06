@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "studiofeixenbold-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "studiofeixenultralightitalic-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-UltralightItalic.ttf")
+    format("truetype");
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "studiofeixensemibold-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Semibold.ttf")
+    format("truetype");
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "studiofeixenultralight-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Ultralight.ttf")
+    format("truetype");
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "studiofeixenbook-trial";
+  src: url("../../assets/fonts/StudioFeixenSansTRIAL-Book.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.home-page {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name,
+.tech {
+  color: rgb(118, 123, 194);
+}
+
+.name-intro {
+  font-size: 3em;
+  font-family: "studiofeixenbook-trial", sans-serif;
+}
+
+.name-call {
+  font-size: 3em;
+  font-family: "studiofeixenbook-trial", sans-serif;
+  position: relative;
+  top: -0.2em;
+}
+
+.experience {
+  font-size: 1.3em;
+  font-family: "studiofeixenultralight-trial", sans-serif;
+}
+
+/* Links */
+
+.links {
+  margin-top: 2em;
+  display: flex;
+  width: 50%;
+  gap: 5em;
+  justify-content: center;
+
+  font-size: 1.3em;
+  font-family: "studiofeixensemibold-trial", sans-serif;
+
+  position: relative;
+}
+
+.resume a:active,
+.resume a {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.resume a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.resume a::before {
+  content: "↓";
+  left: -1em;
+  position: absolute;
+  bottom: 3px;
+}
+
+.link-item:hover,
+.link-item a:hover {
+  color: rgb(118, 123, 194);
+}
+
+.link-item {
+  position: relative;
+}
+
+.link-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: rgb(118, 123, 194);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s cubic-bezier(0.09, 0.9, 0.39, 0.93);
+}
+
+.link-item:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
