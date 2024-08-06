@@ -4,6 +4,7 @@ import { Solo, Pvp, MainMenu } from "../../assets/codewars";
 import { Events, Fines, Scan } from "../../assets/qrca";
 import { Intro, Streams, Tweets } from "../../assets/vupdates";
 import { About, Activities, Home } from "../../assets/tbr";
+import { motion, AnimatePresence, easeOut } from "framer-motion";
 
 interface Project {
   url: string;
@@ -61,61 +62,99 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects">
-      <div className="project-titles">
-        {data.map((project: Project, idx: number) => (
-          <h3
-            className={
-              idx === active ? "project-title title-active" : "project-title"
-            }
-            key={idx}
-            onClick={() => onProjectClick(idx)}
-          >
-            {project.name}
-          </h3>
-        ))}
+    <AnimatePresence>
+      <div className="projects">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.25, ease: easeOut }}
+          className="project-titles"
+        >
+          {data.map((project: Project, idx: number) => (
+            <h3
+              className={
+                idx === active ? "project-title title-active" : "project-title"
+              }
+              key={idx}
+              onClick={() => onProjectClick(idx)}
+            >
+              {project.name}
+            </h3>
+          ))}
+        </motion.div>
+        <AnimatePresence mode="wait">
+          <ProjectItem key={active} projectItem={data[active]} />
+        </AnimatePresence>
       </div>
-      <div className="project-section">
-        <ProjectItem projectItem={data[active]} />
-      </div>
-    </div>
+    </AnimatePresence>
   );
 };
 
 const ProjectItem = ({ projectItem }: { projectItem: Project }) => {
   return (
-    <>
+    <motion.div
+      exit={{ opacity: 0, x: 40 }}
+      transition={{ duration: 0.5, ease: easeOut }}
+      className="project-section"
+    >
       <div className="left-section">
         <div className="project-data">
           <table className="category-table">
             <tbody>
-              <tr className="category-row">
+              <motion.tr
+                initial={{ opacity: 0, left: -40 }}
+                animate={{ opacity: 1, left: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="category-row"
+              >
                 <td className="category-label">Category</td>
                 <td className="category-items">
                   {projectItem.category.map((c: string) => (
                     <div>{c}</div>
                   ))}
                 </td>
-              </tr>
-              <tr>
+              </motion.tr>
+              <motion.tr
+                initial={{ opacity: 0, left: -40 }}
+                animate={{ opacity: 1, left: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
                 <td className="category-label">Technologies</td>
                 <td className="category-items">
                   {projectItem.technologies.map((t: string) => (
                     <div>{t}</div>
                   ))}
                 </td>
-              </tr>
+              </motion.tr>
             </tbody>
           </table>
         </div>
-        <div className="project-details">
+        <motion.div
+          initial={{ opacity: 0, left: -40 }}
+          animate={{ opacity: 1, left: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="project-details"
+        >
           <p className="project-description">{projectItem.description}</p>
-        </div>
-        <a className="github-link" href={projectItem.url} target="noreferrer">
+        </motion.div>
+
+        <motion.a
+          initial={{ opacity: 0, left: -40 }}
+          animate={{ opacity: 1, left: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="github-link"
+          href={projectItem.url}
+          target="noreferrer"
+        >
           Github Repo
-        </a>
+        </motion.a>
       </div>
-      <div className="right-section">
+      <motion.div
+        initial={{ opacity: 0, left: -40 }}
+        animate={{ opacity: 1, left: 0 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="right-section"
+      >
         {projectItem.images.map((image: string, idx: number) => {
           return (
             <img
@@ -130,8 +169,8 @@ const ProjectItem = ({ projectItem }: { projectItem: Project }) => {
             />
           );
         })}
-      </div>
-    </>
+      </motion.div>
+    </motion.div>
   );
 };
 

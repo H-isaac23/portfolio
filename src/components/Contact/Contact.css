@@ -60,6 +60,8 @@
   font-size: 1.1em;
   width: 80%;
   margin-top: 2em;
+
+  position: relative;
 }
 
 .about-right {

@@ -35,15 +35,21 @@
   flex-direction: row;
   justify-content: space-around;
 
-  flex-grow: 1;
+  flex-grow: 0.8;
+  position: relative;
+  top: 4em;
 }
 
 .project-titles {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 7em;
 
   font-family: "studiofeixenbook-trial", sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .project-details {
@@ -53,8 +59,7 @@
   justify-content: center;
   flex-grow: 1;
 
-  /* position: relative;
-  left: 20%; */
+  position: relative;
 }
 
 .project-description {
@@ -224,9 +229,13 @@
   transform: scaleX(1);
 }
 
+tr {
+  position: relative;
+}
 /* Github link */
 
 .github-link {
+  position: relative;
   font-size: 1.5em;
   color: rgb(118, 123, 194);
   text-decoration: underline;
