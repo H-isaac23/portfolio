@@ -8,8 +8,8 @@ interface LayoutProps {
 
 const MainLayout = ({ children }: LayoutProps) => {
   return (
-    <>
-      <header className="main-layout">
+    <div className="main-layout">
+      <header className="header-bar">
         <nav className="navbar">
           {/* <span className="nav-logo">Logo</span> */}
           <Link to="/">
@@ -22,9 +22,9 @@ const MainLayout = ({ children }: LayoutProps) => {
             <span className="nav-item">About / Contact</span>
           </Link>
         </nav>
-        <main className="main-body">{children}</main>
       </header>
-    </>
+      <main className="main-body">{children}</main>
+    </div>
   );
 };
 

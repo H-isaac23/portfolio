@@ -47,6 +47,10 @@
   /* margin-right: 3em; */
 }
 
+.header-bar {
+  display: flex;
+}
+
 .nav-item {
   position: relative;
   left: 0;
