@@ -22,7 +22,30 @@
   /* margin-right: 3em; */
 }
 
-/* .nav-item,
-.nav-logo {
-  margin-left: 2em;
-} */
+.nav-item {
+  position: relative;
+  left: 0;
+  transition: left 0.1s ease, color 0.1s linear;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  left: -0.5em;
+  height: 100%;
+  width: 1px;
+  background-color: rgb(118, 123, 194);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.nav-item:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-item:hover {
+  color: rgb(118, 123, 194);
+  left: 0.5em;
+}
