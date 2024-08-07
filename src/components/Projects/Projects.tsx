@@ -62,7 +62,7 @@ const Projects = () => {
   };
 
   return (
-    <AnimatePresence>
+    <>
       <div className="projects">
         <motion.div
           initial={{ opacity: 0 }}
@@ -86,7 +86,7 @@ const Projects = () => {
           <ProjectItem key={active} projectItem={data[active]} />
         </AnimatePresence>
       </div>
-    </AnimatePresence>
+    </>
   );
 };
 

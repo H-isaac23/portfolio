@@ -1,10 +1,10 @@
 import React from "react";
 import "./Home.css";
-import { easeOut, motion, AnimatePresence } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <AnimatePresence>
+    <>
       <motion.main
         initial={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -24,7 +24,7 @@ const Home = () => {
           transition={{ duration: 0.5, ease: easeOut, delay: 0.75 }}
           className="name-call"
         >
-          Isaac You can call me <span className="name">Isaac</span>
+          You can call me <span className="name">Isaac</span>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, top: 50 }}
@@ -59,7 +59,7 @@ const Home = () => {
           </div>
         </motion.div>
       </motion.main>
-    </AnimatePresence>
+    </>
   );
 };
 
