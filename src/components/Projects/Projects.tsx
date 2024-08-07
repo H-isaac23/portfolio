@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./project.css";
 import { Solo, Pvp, MainMenu } from "../../assets/codewars";
 import { Events, Fines, Scan } from "../../assets/qrca";
