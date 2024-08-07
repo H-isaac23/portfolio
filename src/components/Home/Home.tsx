@@ -16,7 +16,7 @@ const Home = () => {
           transition={{ duration: 0.5, ease: easeOut, delay: 0.8 }}
           className="name-intro"
         >
-          Hey, I'm <span className="name">John Isaac Delgado</span>
+          Hey, I'm <span className="name full">John Isaac Delgado</span>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, top: 50 }}
