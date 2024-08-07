@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { easeOut, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -51,7 +52,9 @@ const Home = () => {
           transition={{ duration: 0.5, ease: easeOut, delay: 0.6 }}
           className="links"
         >
-          <div className="link-item">→ My Projects</div>
+          <Link to="/projects">
+            <div className="link-item">→ My Projects</div>
+          </Link>
           <div className="link-item resume">
             <a
               href="/John Isaac Delgado Resume.pdf"
