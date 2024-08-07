@@ -36,7 +36,7 @@ const MainLayout = ({ children }: LayoutProps) => {
                 pathname === "/contact" ? "nav-item nav-active" : "nav-item"
               }
             >
-              About / Contact
+              About
             </span>
           </Link>
         </nav>
