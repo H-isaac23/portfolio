@@ -53,7 +53,10 @@ const Home = () => {
         >
           <div className="link-item">→ My Projects</div>
           <div className="link-item resume">
-            <a href="/resume.pdf" download="John Isaac Delgado Resume.pdf">
+            <a
+              href="/John Isaac Delgado Resume.pdf"
+              download="John Isaac Delgado Resume.pdf"
+            >
               Resume
             </a>
           </div>
