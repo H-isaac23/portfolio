@@ -1,4 +1,3 @@
-import React from "react";
 import "./Contact.css";
 import { Isaac } from "../../assets/contact";
 import { easeOut, motion } from "framer-motion";
