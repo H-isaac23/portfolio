@@ -116,3 +116,13 @@
 .contact-item a:active {
   color: rgba(255, 255, 255, 0.87);
 }
+
+@media (max-width: 787px) {
+  .about-right {
+    display: none;
+  }
+
+  .about-left {
+    width: 100%;
+  }
+}
