@@ -57,14 +57,6 @@ const Contact = () => {
             <motion.div
               initial={{ opacity: 0, top: 50 }}
               animate={{ opacity: 1, top: 0 }}
-              transition={{ duration: 0.5, ease: easeOut, delay: 0.5 }}
-              className="contact-item"
-            >
-              +639295012253
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, top: 50 }}
-              animate={{ opacity: 1, top: 0 }}
               transition={{ duration: 0.5, ease: easeOut, delay: 0.4 }}
               className="contact-item"
             >
