@@ -119,4 +119,12 @@
   .header-bar {
     width: 100vw;
   }
+
+  .nav-item::before {
+    all: unset;
+  }
+
+  .nav-item:hover {
+    left: 0;
+  }
 }

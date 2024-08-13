@@ -1,6 +1,7 @@
 import React from "react";
 import "./layout.css";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,7 +10,12 @@ interface LayoutProps {
 const MainLayout = ({ children }: LayoutProps) => {
   const { pathname } = useLocation();
   return (
-    <div className="main-layout">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      className="main-layout"
+    >
       <header className="header-bar">
         <nav className="navbar">
           <Link to="/">
@@ -40,7 +46,7 @@ const MainLayout = ({ children }: LayoutProps) => {
         </nav>
       </header>
       <main className="main-body">{children}</main>
-    </div>
+    </motion.div>
   );
 };
 
