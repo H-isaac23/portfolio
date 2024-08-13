@@ -8,12 +8,10 @@ interface LayoutProps {
 
 const MainLayout = ({ children }: LayoutProps) => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <div className="main-layout">
       <header className="header-bar">
         <nav className="navbar">
-          {/* <span className="nav-logo">Logo</span> */}
           <Link to="/">
             <span
               className={pathname === "/" ? "nav-item nav-active" : "nav-item"}
