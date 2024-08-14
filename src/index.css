@@ -18,6 +18,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-text: rgba(255, 255, 255, 0.8);
+  --color-text-hover: rgb(118, 123, 194);
+  --color-text-inactive: rgba(255, 255, 255, 0.3);
 }
 
 a {

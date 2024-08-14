@@ -41,7 +41,7 @@
   font-family: "studiofeixenbold-trial", sans-serif;
   font-weight: bold;
   font-size: 3em;
-  color: rgb(118, 123, 194);
+  color: var(--color-text-hover);
   position: relative;
 }
 
@@ -50,7 +50,7 @@
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: rgb(118, 123, 194);
+  background-color: var(--color-text-hover);
   bottom: 0;
   left: 0;
 }
@@ -60,6 +60,7 @@
   font-size: 1.1em;
   width: 80%;
   margin-top: 2em;
+  color: var(--color-text);
 
   position: relative;
 }
@@ -109,12 +110,12 @@
 .contact-item a:hover {
   position: relative;
   left: 40px;
-  color: rgb(118, 123, 194);
+  color: var(--color-text-hover);
 }
 
 .contact-item a,
 .contact-item a:active {
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--color-text);
 }
 
 @media (max-width: 787px) {
