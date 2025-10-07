@@ -1,3 +1,3 @@
-export { default as Events } from "./Events.png";
-export { default as Fines } from "./Fines.png";
-export { default as Scan } from "./Scan.png";
+export { default as Events } from "./Events.webp";
+export { default as Fines } from "./Fines.webp";
+export { default as Scan } from "./Scan.webp";

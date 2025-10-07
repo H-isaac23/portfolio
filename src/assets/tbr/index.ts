@@ -1,3 +1,3 @@
-export { default as About } from "./About.jpg";
-export { default as Activities } from "./Activities.jpg";
-export { default as Home } from "./Home.jpg";
+export { default as About } from "./About.webp";
+export { default as Activities } from "./Activities.webp";
+export { default as Home } from "./Home.webp";

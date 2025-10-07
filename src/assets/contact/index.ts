@@ -1,1 +1,1 @@
-export { default as Isaac } from "./Isaac.jpg";
+export { default as Isaac } from "./Isaac.webp";
